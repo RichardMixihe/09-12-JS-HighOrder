@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.对象解构赋值的时候，变量的名字可以和属性的名字一样
+        //2. 如果变量的名字和属性的名字相同了，则变量名可以省略不写
+        // 3.如果对象中没有找到对应的属性，则得到的结果是undefind
+        // let obj = {
+        //     age:1,
+        //     name :'zs'
+        // }
+        // let {age,name} = obj
+        // // let {age:a,name:b} = obj
+        // console.log(age);
+        // console.log(name);
+
+
+
+        // 2.解构如下形式的数据？
+        let obj = {
+            mama : {
+                name:'zs',
+                age:45
+            }
+        }
+        // let {mama} = obj
+        // let {name:a,age:b} = mama;
+        // console.log(mama);
+        // console.log(a);
+        // console.log(b);
+
+
+        // 3.多级对象解构简写
+            // let {mama:{name,age}} = obj;
+            // console.log(name,age);
+        // 原则：要解构的对象张什么样子，那么解构的时候就写对应的格式
+    </script>
+</body>
+</html>
