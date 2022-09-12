@@ -9,6 +9,21 @@
 <body>
     <script>
         // 1.遍历数组，之前遍历数组？通过for循环进行遍历数组
+        // 2.遍历数组，除了可以使用for循环，还可以使用forEach循环实现
+        const goodsList = [
+            {},
+            {}
+        ]
+        // 3.foreach语法 :foreach 是数组的方法，只有数组才可以调用该方法
+
+        // 4.遍历数组的时候item代表数组中的每一个值，index代表数组中每一个值对应的索引
+        //数组名.foreach（function(item,index){})
+
+        // 代码演
+        goodsList.forEach(function (item,index) {
+            console.log(item);
+            console.log(index);
+        })
     </script>
 </body>
 </html>
