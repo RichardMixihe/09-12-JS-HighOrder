@@ -21,6 +21,25 @@
 
         // b)新方法：
         // 数组名.map()  作用：用来处理数组中所有的值
+        // 语法：
+        // 数组名.map(function(item,index){})
+        // 总结：
+        // a) 回调函数中第一个参数代表每一个值
+        // b) 回调函数第二个参数代表数组中每个值的索引
+        // c) map方法也可以遍历数组
+        // d) map也可以获取返回值，返回的结果是数组中所有的值（filter是筛选后的值，forEach没有返回值）
+
+        let ary = [1,2,3,4,5];
+        // ary .map(function(item,index){
+        //     console.log(item);
+        // })
+        // 要求：将数组中的每一个值都扩大二倍
+        let res = ary.map(item =>{
+            return item *2;
+        })
+        console.log(res);
+        
+
 
         // 数组名.reduce()
     </script>
