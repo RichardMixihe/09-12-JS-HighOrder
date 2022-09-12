@@ -8,16 +8,21 @@
 </head>
 <body>
     <script>
+        let obj  = {
+            uname:'zs',
+            age :12,
+            height:199
+        }
         // 1.Object 构造函数提供的静态成员方法：
         // Object.keys(对象); 作用：获取对象中所有的键
+        // console.log(Object.keys(obj));
 
+        // Object.values(对象); 作用：获取对象中所有的值
+        // console.log(Object.value(obj));
 
-
-
-
-
-        // Object.values();
-        // Object.assign();
+        // Object.assign(targetObject,oldObject);  作用将原来的对象拷贝赋值给另外一个对象
+        let newObj = {};
+        console.log(Object.assign(newObj,obj));
     </script>
 </body>
 </html>
