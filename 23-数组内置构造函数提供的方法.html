@@ -29,19 +29,40 @@
         // c) map方法也可以遍历数组
         // d) map也可以获取返回值，返回的结果是数组中所有的值（filter是筛选后的值，forEach没有返回值）
 
-        let ary = [1,2,3,4,5];
-        // ary .map(function(item,index){
-        //     console.log(item);
+        // let ary = [1,2,3,4,5];
+        // // ary .map(function(item,index){
+        // //     console.log(item);
+        // // })
+        // // 要求：将数组中的每一个值都扩大二倍
+        // let res = ary.map(item =>{
+        //     return item *2;
         // })
-        // 要求：将数组中的每一个值都扩大二倍
-        let res = ary.map(item =>{
-            return item *2;
-        })
-        console.log(res);
+        // console.log(res);
         
 
 
-        // 数组名.reduce()
+        // 数组名.reduce();   作用：对数组进行累加求和
+        // 语法：
+        // 数组名.reduce(function(累计值,数组中的元素){},起始值)  
+
+
+        // 语法解释：
+        // 累计值：就是sum变量
+        // 数组中的元素：数组中的值
+        // 起始值：从那个值开始累加，就是数组中的值 ary[i]
+
+        // 语法注意事项：
+        // a)如果reduce方法设置了起始值，那么累计值就是从起始值开始累加求和
+        // b)如果reduce方法没有设置起始值，那么数组默认从第一个值开始累积求和的
+
+        let ary = [1,2,3,4,5];
+        // 求数组中的和
+        let res = ary.reduce(function(sum,item){
+            return sum += item
+
+        },1)
+        console.log(res);
+
     </script>
 </body>
 </html>
