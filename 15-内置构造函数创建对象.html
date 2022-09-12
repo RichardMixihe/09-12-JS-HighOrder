@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 通过内置构造函数创建对象，该如何给对象设置属性或方法？
+
+        // obj就是一个对象
+        let obj = new Object();
+
+        // 如何给内置构造函数创建的对象设置方法或属性？ 对象名.属性   / 对象名[]
+        obj.uname = 'zs'
+        obj.eat = function(){
+            console.log('正在吃饭');
+        }
+        // 如何得到对象中的属性值？调用对象中的方法？
+        obj.eat;
+        console.log(obj.uname);
+
+    </script>
+</body>
+</html>
