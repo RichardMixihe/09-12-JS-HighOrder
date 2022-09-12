@@ -23,12 +23,12 @@
 
 
         // 2.解构如下形式的数据？
-        let obj = {
-            mama : {
-                name:'zs',
-                age:45
-            }
-        }
+        // let obj = {
+        //     mama : {
+        //         name:'zs',
+        //         age:45
+        //     }
+        // }
         // let {mama} = obj
         // let {name:a,age:b} = mama;
         // console.log(mama);
@@ -40,6 +40,17 @@
             // let {mama:{name,age}} = obj;
             // console.log(name,age);
         // 原则：要解构的对象张什么样子，那么解构的时候就写对应的格式
+
+        // 4.数据格式：数组对象格式
+        let ary = [
+            {age:1, name :'zs'},
+            {age:2, name :'ls'},
+        ]
+            let [{age:age1,name:name1},{age:age2,name:name2}]  = ary
+            console.log(name1);
+            console.log(age1);
+            console.log(age2);
+            console.log(name2);
     </script>
 </body>
 </html>
