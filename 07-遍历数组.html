@@ -16,14 +16,21 @@
         ]
         // 3.foreach语法 :foreach 是数组的方法，只有数组才可以调用该方法
 
-        // 4.遍历数组的时候item代表数组中的每一个值，index代表数组中每一个值对应的索引
+        // 4.遍历数组的时候 item 代表数组中的每一个值，index 代表数组中每一个值对应的索引
         //数组名.foreach（function(item,index){})
 
         // 代码演
-        goodsList.forEach(function (item,index) {
-            console.log(item);
-            console.log(index);
-        })
+        // goodsList.forEach(function (item,index) {
+        //     console.log(item);
+        //     console.log(index);
+        // })
+
+        // goodsList.forEach(function()  =>{
+            
+        // })
+        goodsList.forEach((item,index) => {
+            console.log(item,index);
+        });
     </script>
 </body>
 </html>
