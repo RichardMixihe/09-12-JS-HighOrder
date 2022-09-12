@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 就是构造函数中的一种新的称呼
+        // 1,实例成员::在构造函数内部通过th1s设置的属性或方法都叫实例成员
+            // 实例成员的特点：实例成员必须通过对象才能使用
+
+        // 2.静态成员:通过构造函数直接设置的属性或方法叫静态成员
+
+
+        function People(uname){
+            // 实例成员
+            this.uname =  uname ;
+        }
+        //静态成员
+        People.age = 12;
+        // 实例成员的特点：实例成员必须通过对象才能使用
+    </script>
+</body>
+</html>
