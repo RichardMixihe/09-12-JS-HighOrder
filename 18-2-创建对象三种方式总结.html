@@ -15,8 +15,8 @@
             let obj1 = new Object()
 
             //注意：字面量方式本质上就是内置构造函数方式的简写形式
-            console.log(obj);
-            console.log(obj1);
+            // console.log(obj);
+            // console.log(obj1);
 
 
             // b)如果程序中需要大量的创建对象,那么推荐使用自定义构造函数
@@ -25,6 +25,18 @@
             // 2,在程序中如何区别构造函数和普通函数？
             // 构造函数的命名要遵守帕斯卡命名法（单词首字母大写）
             // 普通函数的命名要遵守驼峰命名法 （首字母小写第二个单词首字母大写）
+
+            // 3.构造函数中的this指向问题 ：构造函数中的this指向了通过构造函数创建的对象
+            let box;
+            function People (uname){
+                this.uname = uname;
+                box = this;
+            }
+            let zs = new People('zs')
+
+            // 如何证明：this现在就是zs?判断    this 和  zs相等
+            // 证明写法（使用谎言验证一个谎言，得到一定是一个谎言）
+            console.log(box===zs);
     </script>
 </body>
 </html>
