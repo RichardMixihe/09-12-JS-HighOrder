@@ -8,7 +8,25 @@
 </head>
 <body>
     <script>
-        
+         const goodsList = [
+                {
+                    id: '4001172',
+                    name: '称心如意手摇咖啡磨豆机咖啡豆研磨机',
+                    price: '289.00',
+                    picture: 'https://yanxuan-item.nosdn.127.net/84a59ff9c58a77032564e61f716846d6.jpg',
+                },
+                {
+                    id: '4001594',
+                    name: '日式黑陶功夫茶组双侧把茶具礼盒装',
+                    price: '288.00',
+                    picture: 'https://yanxuan-item.nosdn.127.net/3346b7b92f9563c7a7e24c7ead883f18.jpg',
+                },
+        ];
+        goodsList.forEach(item => {
+            //对象解构赋值
+            let{id,name,price,picture} = item;
+            console.log(name,id);
+        });
     </script>
 </body>
 </html>
