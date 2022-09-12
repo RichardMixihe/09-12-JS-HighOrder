@@ -149,26 +149,65 @@
       },
     ]
     //   1.根据市局进行页面的渲染
-    function loadData(ary){
-        // 定义一个空字符串
-        let str = ''
-    //   2.根据用户传递过来的数据进行页面渲染
-        ary.forEach(item => {
-            // 对象解构赋值
-            let {name,price,picture} = item;
-            // 将要创建的标签拼接到字符串中
-            str += `
-                <div class="item">
-                <img src="${picture}" alt="">
-                <p class="name">${name}</p>
-                <p class="price">${price}</p>
-                </div> 
-            `
-        });
-        // 将拼接好的字符串设置给list标签
-        document.querySelector('.list').innerHTML = str;//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
-    }
+        function loadData(ary){
+            // 定义一个空字符串
+            let str = ''
+        //   2.根据用户传递过来的数据进行页面渲染
+            ary.forEach(item => {
+                // 对象解构赋值
+                let {name,price,picture} = item;
+                // 将要创建的标签拼接到字符串中
+                str += `
+                    <div class="item">
+                    <img src="${picture}" alt="">
+                    <p class="name">${name}</p>
+                    <p class="price">${price}</p>
+                    </div> 
+                `
+            });
+            // 将拼接好的字符串设置给list标签
+            document.querySelector('.list').innerHTML = str;//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        }
     loadData(goodsList)
+
+    //2,商品筛选：点击按钮，显示对应的价格区间内的商品信息
+        // 从数组中筛选商品信息：条件
+        // 1从数组中筛选商品信息：条件商品的价格>=0 && 商品的价格 <= 100
+        // 2.商品的价格>100 && 商品的价格<=380
+        // 3.商品的价格>300
+
+        //利用委托实现注册事件
+        document.querySelector('.filter').addEventListener('click', (e)=>{
+            //得到事件源
+            let btn = e.target
+            // 对事件源进行判断
+            if(btn.tagName == 'A'){
+                // 定义变量用来放筛选后的结果
+                let res = goodsList;
+                //知道用户点击的是哪个按钮 0-100价格区间
+                if(btn.dataset.index =='1'){
+                    res = goodsList.filter(item =>{
+                        return item.price >=0 && item.price<=100
+                    })
+                }else if(btn.dataset.index == '2'){
+                    res = goodsList.filter(item =>{
+                        return item.price >100 && item.price<=300
+                    })
+                    //100-300价格区间
+                }else if(btn.dataset.index == '3'){
+                    res = goodsList.filter(item =>{
+                        return item.price >300;
+                    })
+                }
+                // 根据筛选后的结果重新渲染页面
+        loadData(res)
+            }
+        
+
+        });//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+
+
+        
   </script>
 </body>
 
